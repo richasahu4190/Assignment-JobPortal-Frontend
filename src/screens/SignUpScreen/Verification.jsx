@@ -38,7 +38,7 @@ const Verification = () => {
 
   const handleEmailVerification = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/verify-email', {
+      const response = await axios.post('https://assignment-jobportal-backend.onrender.com/api/auth/verify-email', {
         email,
         otp: emailOtp,
       });
@@ -58,7 +58,7 @@ const Verification = () => {
   const handleMobileVerification = async () => {
     try {
       // Assuming there is a similar API for mobile verification
-      const response = await axios.post('http://localhost:5000/api/auth/verify-mobile', {
+      const response = await axios.post('https://assignment-jobportal-backend.onrender.com/api/auth/verify-mobile', {
         otp: mobileOtp, // Assuming mobile OTP doesn't require email
       });
       

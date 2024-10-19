@@ -7,7 +7,7 @@ const JobDetailModal = ({ job, onClose }) => {
     const handleDeleteJob = async (jobId) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://localhost:5000/api/jobs/${jobId}`, {
+            const response = await fetch(`https://assignment-jobportal-backend.onrender.com/api/jobs/${jobId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const JobDetailModal = ({ job, onClose }) => {
         };
 
         try {
-            const response = await fetch(`http://localhost:5000/api/jobs/${jobId}/send-alerts`, {
+            const response = await fetch(`https://assignment-jobportal-backend.onrender.com/api/jobs/${jobId}/send-alerts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const Homepage = () => {
         const fetchJobs = async () => {
             const token = localStorage.getItem('token'); // Retrieve the token from local storage
             try {
-                const response = await fetch('http://localhost:5000/api/jobs/', {
+                const response = await fetch('https://assignment-jobportal-backend.onrender.com/api/jobs/', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -152,7 +152,7 @@ const Homepage = () => {
     const handleJobClick = async (jobId) => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch(`http://localhost:5000/api/jobs/${jobId}`, {
+            const response = await fetch(`https://assignment-jobportal-backend.onrender.com/api/jobs/${jobId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -174,7 +174,7 @@ const Homepage = () => {
     const handleLogout = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await fetch('http://localhost:5000/api/auth/logout', {
+            const response = await fetch('https://assignment-jobportal-backend.onrender.com/api/auth/logout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
